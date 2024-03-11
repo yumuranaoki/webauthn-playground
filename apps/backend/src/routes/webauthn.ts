@@ -18,4 +18,13 @@ app.get("/webauthn/generate-options", async (c) => {
   return c.json(options);
 });
 
+app.post("/webauthn/register", async (c) => {
+  const challenge = await getSignedCookie(c, "webauthn_challenge", cookieSecret);
+  if (challenge === null) return c.json({ message: "challenge not found" }, 400);
+
+  await deleteCookie(c, "webauthn_challenge");
+
+  return c.json({ message: "ok" });
+});
+
 export default app;
