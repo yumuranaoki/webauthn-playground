@@ -5,7 +5,12 @@ import webauthn from "./routes/webauthn";
 
 const app = new Hono();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "http://localhost:5000",
+    credentials: true,
+  })
+);
 app.route("/", webauthn);
 
 const port = 8000;
