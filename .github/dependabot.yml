@@ -1,0 +1,11 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/apps/backend"
+    schedule:
+      interval: "monthly"
+    groups:
+       dependencies:
+          applies-to: version-updates
+          patterns:
+            - "*"
