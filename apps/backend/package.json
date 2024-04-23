@@ -3,11 +3,11 @@
     "dev": "tsx watch src/index.ts"
   },
   "dependencies": {
-    "@hono/node-server": "^1.8.2",
+    "@hono/node-server": "^1.10.1",
     "@simplewebauthn/server": "^9.0.3",
     "@simplewebauthn/types": "^9.0.1",
     "base64url": "^3.0.1",
-    "hono": "^4.0.9"
+    "hono": "^4.2.7"
   },
   "devDependencies": {
     "@types/node": "^20.11.17",
